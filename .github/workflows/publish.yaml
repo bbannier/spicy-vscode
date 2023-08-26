@@ -1,0 +1,20 @@
+---
+on:
+  push:
+    tags: [v*]
+name: Publish release
+jobs:
+  publish:
+    name: Publish artifacts to Visual Studio Marketplace
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '15.x'
+      - run: |
+          npm install
+          npm install -g @vscode/vsce
+      - run: |-
+          vsce package
+          vsce publish -p ${{ secrets.VSCODE_MARKETPLACE_TOKEN }}
