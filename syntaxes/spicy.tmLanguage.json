@@ -26,6 +26,9 @@
 				"name": "support.function",
 				"match": "(function|hook)"
 			}, {
+				"name": "keyword.control.import",
+				"match": "import"
+			}, {
 				"name": "variable.language",
 				"match": "(self|\\$\\$)"
 			}, {

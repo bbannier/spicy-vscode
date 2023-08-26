@@ -2,6 +2,8 @@
 
 module sample;
 
+import spicy;
+
 function foo(x: uint8) {
     while (True) {
     }
