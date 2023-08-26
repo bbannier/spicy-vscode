@@ -91,7 +91,7 @@
 		"visibility": {
 			"patterns": [{
 				"name": "storage.modifier",
-				"match": "public"
+				"match": "(public|global|local)"
 			}]
 		},
 		"type": {

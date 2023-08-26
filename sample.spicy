@@ -4,7 +4,10 @@ module sample;
 
 import spicy;
 
+global NUM = 1000;
+
 function foo(x: uint8) {
+    local y = x;
     while (True) {
     }
     print 1 + 1;
