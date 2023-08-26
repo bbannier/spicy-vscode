@@ -1,0 +1,101 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Spicy",
+	"patterns": [
+		{ "include": "#strings" },
+		{ "include": "#regexps" },
+		{ "include": "#builtins" },
+		{ "include": "#typedecl" },
+		{ "include": "#comments" },
+		{ "include": "#visibility" },
+		{ "include": "#type" },
+		{ "include": "#keywords" }
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.spicy",
+				"match": "\\b(if|while|for|return)\\b"
+			}, {
+				"name": "keyword.spicy",
+				"match": "module"
+			}, {
+				"name": "constant.language",
+				"match": "(True|False)"
+			}, {
+				"name": "support.function",
+				"match": "(function|hook)"
+			}, {
+				"name": "variable.language",
+				"match": "(self|\\$\\$)"
+			}, {
+				"name": "keyword.operator",
+				"match": "(\\+|-|\\*|/|\\+=|-=|\\*=|/=|\\+\\+|--|\\.|\\.\\?|\\?\\.)"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.spicy",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [{
+				"name": "constant.character.escape.spicy",
+				"match": "\\\\."
+			}, {
+				"name": "constant.other.placeholder",
+				"match": "(%s|%d)"
+			}]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment.line.spicy",
+				"match": "#(.*)$"
+			}]
+		},
+		"builtins": {
+			"patterns": [{
+				"name": "storage.type",
+				"match": "u?int(8|16|32|64)"
+			}, {
+				"name": "storage.type",
+				"match": "(bitfield|bytes|string)"
+			}, {
+				"name": "support.function",
+				"match": "(print|assert|pack|unpack)"
+			}
+		]},
+		"typedecl": {
+			"patterns": [{
+				"name": "keyword.declaration.class",
+				"match": "unit"
+			}, {
+				"name": "keyword.declaration.struct",
+				"match": "struct"
+			}, {
+				"name": "keyword.declaration.enum",
+				"match": "enum"
+			}, {
+				"name": "meta.annotation",
+				"match": "&(\\w|\\d|-)+"
+			}]
+		},
+		"visibility": {
+			"patterns": [{
+				"name": "storage.modifier",
+				"match": "public"
+			}]
+		},
+		"type": {
+			"patterns": [{
+				"name": "keyword.declaration.type",
+				"match": "type"
+			}]
+		},
+		"regexps": {
+			"patterns": [{
+				"name": "string.regexp.spicy",
+				"match": "\\/(.*)\\/"
+			}]
+		}
+	},
+	"scopeName": "source.spicy"
+}

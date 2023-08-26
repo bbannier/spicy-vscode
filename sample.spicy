@@ -1,0 +1,29 @@
+# Sample module.
+
+module sample;
+
+function foo(x: uint8) {
+    while (True) {
+    }
+    print 1 + 1;
+}
+
+type E = enum {
+    A, B, C
+};
+
+public type U = unit {
+    : /foo?[a|b](c|d)*$/;
+    : b"ABC";
+    : b"\x01\x02";
+    a: uint8;
+    b: bytes &size=42 { print |$$|; }
+    c: int64 { print $$; }
+
+    on a {}
+
+    on %done {
+        print "foo %s" % (self);
+        print self.a, self?.a;
+    }
+};

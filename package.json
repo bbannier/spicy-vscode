@@ -1,0 +1,39 @@
+{
+  "name": "spicy",
+  "displayName": "Spicy",
+  "description": "Syntax highlighting for the Spicy language",
+  "author": "Benjamin Bannier",
+  "license": "MIT",
+  "publisher": "bbannier",
+  "preview": true,
+  "private": true,
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.81.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": ["spicy", "zeek"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bbannier/spicy-vscode"
+  },
+  "bugs": {
+    "url": "https://github.com/bbannier/spicy-vscode/issues"
+  },
+  "homepage": "https://github.com/bbannier/spicy-vscode",
+  "contributes": {
+    "languages": [{
+      "id": "spicy",
+      "aliases": ["Spicy", "spicy"],
+      "extensions": ["spicy"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "spicy",
+      "scopeName": "source.spicy",
+      "path": "./syntaxes/spicy.tmLanguage.json"
+    }]
+  }
+}
