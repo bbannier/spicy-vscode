@@ -32,6 +32,13 @@
 				"name": "variable.language",
 				"match": "(self|\\$\\$)"
 			}, {
+				"match": "%\\w+",
+					"name": "variable.function",
+					"comment": "hook names like %done"
+			}, {
+				"match": "(\\s|^)(on)\\s",
+				"name": "keyword.other"
+			}, {
 				"name": "keyword.operator",
 				"match": "(\\+|-|\\*|/|\\+=|-=|\\*=|/=|\\+\\+|--|\\.|\\.\\?|\\?\\.|%)"
 			}]
