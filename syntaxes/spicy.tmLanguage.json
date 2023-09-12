@@ -24,19 +24,19 @@
 				"match": "(True|False)"
 			}, {
 				"name": "support.function",
-				"match": "(function|hook)"
+				"match": "\\b(function|hook)\\b"
 			}, {
 				"name": "keyword.control.import",
 				"match": "import"
 			}, {
 				"name": "variable.language",
-				"match": "(self|\\$\\$)"
+				"match": "\\b(self|\\$\\$)\\b"
 			}, {
 				"match": "%\\w+",
 					"name": "variable.function",
 					"comment": "hook names like %done"
 			}, {
-				"match": "(\\s|^)(on)\\s",
+				"match": "\\b(on)\\b",
 				"name": "keyword.other"
 			}, {
 				"name": "keyword.operator",
@@ -52,7 +52,7 @@
 				"match": "\\\\."
 			}, {
 				"name": "constant.other.placeholder",
-				"match": "(%s|%d)"
+				"match": "\\b(%s|%d)\\b"
 			}]
 		},
 		"comments": {
@@ -64,13 +64,13 @@
 		"builtins": {
 			"patterns": [{
 				"name": "storage.type",
-				"match": "u?int(8|16|32|64)"
+				"match": "\\b(u?int(8|16|32|64))\\b"
 			}, {
 				"name": "storage.type",
-				"match": "(bitfield|bytes|string)"
+				"match": "\\b(bitfield|bytes|string)\\b"
 			}, {
 				"name": "support.function",
-				"match": "(print|assert|pack|unpack)"
+				"match": "\\b(print|assert|pack|unpack)\\b"
 			}
 		]},
 		"typedecl": {
@@ -91,13 +91,13 @@
 		"visibility": {
 			"patterns": [{
 				"name": "storage.modifier",
-				"match": "(public|global|local)"
+				"match": "\\b(public|global|local)\\b"
 			}]
 		},
 		"type": {
 			"patterns": [{
 				"name": "keyword.declaration.type",
-				"match": "type"
+				"match": "\\btype\\b"
 			}]
 		},
 		"regexps": {
