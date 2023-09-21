@@ -2,6 +2,7 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "Spicy",
 	"patterns": [
+		{ "include": "#preproc" },
 		{ "include": "#strings" },
 		{ "include": "#regexps" },
 		{ "include": "#builtins" },
@@ -104,6 +105,12 @@
 			"patterns": [{
 				"name": "string.regexp.spicy",
 				"match": "\\/(.*)\\/"
+			}]
+		},
+		"preproc": {
+			"patterns": [{
+				"name": "keyword.other.spicy",
+				"match": "@\\w+"
 			}]
 		}
 	},
