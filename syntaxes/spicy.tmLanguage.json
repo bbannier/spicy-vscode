@@ -33,8 +33,8 @@
 				"match": "\\b(self|\\$\\$)\\b"
 			}, {
 				"match": "%\\w+",
-					"name": "variable.function",
-					"comment": "hook names like %done"
+				"name": "variable.function",
+				"comment": "hook names like %done"
 			}, {
 				"match": "\\b(on)\\b",
 				"name": "keyword.other"
@@ -76,13 +76,13 @@
 		"typedecl": {
 			"patterns": [{
 				"name": "keyword.declaration.class",
-				"match": "unit"
+				"match": "\\bunit\\b"
 			}, {
 				"name": "keyword.declaration.struct",
-				"match": "struct"
+				"match": "\\bstruct\\b"
 			}, {
 				"name": "keyword.declaration.enum",
-				"match": "enum"
+				"match": "\\benum\\b"
 			}, {
 				"name": "meta.annotation",
 				"match": "&(\\w|\\d|-)+"
