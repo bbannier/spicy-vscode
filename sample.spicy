@@ -18,12 +18,15 @@ type E = enum {
 };
 
 public type U = unit {
+    %random-access;
     : /foo?[a|b](c|d)*$/;
     : b"ABC";
     : b"\x01\x02";
     a: uint8;
     b: bytes &size=42 { print |$$|; }
     c: int64 { print $$; }
+    d: bytes &eod;
+    e: bytes &size=1;
 
     on a {}
 

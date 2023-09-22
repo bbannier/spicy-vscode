@@ -33,6 +33,11 @@
 				"name": "variable.language",
 				"match": "\\b(self|\\$\\$)\\b"
 			}, {
+				"match": "(%(\\w+)(-\\w+))*\\s*(;|=)",
+				"captures": {
+					"1": { "name": "entity.other.attribute-name" }
+				}
+			}, {
 				"match": "%\\w+",
 				"name": "variable.function",
 				"comment": "hook names like %done"
@@ -41,8 +46,9 @@
 				"name": "keyword.other"
 			}, {
 				"name": "keyword.operator",
-				"match": "(\\+|-|\\*|/|\\+=|-=|\\*=|/=|\\+\\+|--|\\.|\\.\\?|\\?\\.|%)"
-			}]
+				"match": "(\\+|-|\\*|/|\\+=|-=|\\*=|/=|\\+\\+|--|\\.|\\.\\?|\\?\\.|%)\\s"
+			}
+		]
 		},
 		"strings": {
 			"name": "string.quoted.double.spicy",
@@ -85,8 +91,8 @@
 				"name": "keyword.declaration.enum",
 				"match": "\\benum\\b"
 			}, {
-				"name": "meta.annotation",
-				"match": "&(\\w|\\d|-)+"
+				"name": "entity.other.attribute-name",
+				"match": "\\s&\\w+\\b"
 			}]
 		},
 		"visibility": {
