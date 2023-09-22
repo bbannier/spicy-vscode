@@ -99,6 +99,10 @@
 			"patterns": [{
 				"name": "keyword.declaration.type",
 				"match": "\\btype\\b"
+			},
+			{
+				"name": "storage.type.spicy",
+				"match": "\\bvar\\b"
 			}]
 		},
 		"regexps": {
