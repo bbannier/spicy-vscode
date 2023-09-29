@@ -7,7 +7,7 @@
   "publisher": "bbannier",
   "preview": true,
   "private": true,
-  "version": "0.0.7",
+  "version": "0.0.8",
   "engines": {
     "vscode": "^1.81.0"
   },
@@ -35,7 +35,7 @@
           "spicy"
         ],
         "extensions": [
-          "spicy"
+          ".spicy"
         ],
         "configuration": "./language-configuration.json"
       }
