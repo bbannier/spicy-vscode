@@ -19,33 +19,37 @@
 				"match": "\\b(if|while|for|return)\\b"
 			}, {
 				"name": "keyword.spicy",
-				"match": "module"
+				"match": "\\bmodule\\b"
 			}, {
-				"name": "constant.language",
+				"name": "constant.language.spicy",
 				"match": "(True|False)"
 			}, {
-				"name": "support.function",
+				"name": "support.function.spicy",
 				"match": "\\b(function|hook)\\b"
 			}, {
-				"name": "keyword.control.import",
-				"match": "import"
+				"name": "keyword.control.import.spicy",
+				"match": "\\bimport\\b"
 			}, {
-				"name": "variable.language",
-				"match": "\\b(self|\\$\\$)\\b"
+				"name": "variable.language.spicy",
+				"match": "\\bself\\b"
 			}, {
+				"name": "variable.language.spicy",
+				"match": "\\$\\$"
+			},
+			{
 				"match": "(%(\\w+)(-\\w+))*\\s*(;|=)",
 				"captures": {
-					"1": { "name": "entity.other.attribute-name" }
+					"1": { "name": "entity.other.attribute-name.spicy" }
 				}
 			}, {
 				"match": "%\\w+",
-				"name": "variable.function",
+				"name": "variable.function.spicy",
 				"comment": "hook names like %done"
 			}, {
 				"match": "\\b(on)\\b",
-				"name": "keyword.other"
+				"name": "keyword.other.spicy"
 			}, {
-				"name": "keyword.operator",
+				"name": "keyword.operator.spicy",
 				"match": "(\\+|-|\\*|/|\\+=|-=|\\*=|/=|\\+\\+|--|\\.|\\.\\?|\\?\\.|%)\\s"
 			}
 		]
@@ -58,7 +62,7 @@
 				"name": "constant.character.escape.spicy",
 				"match": "\\\\."
 			}, {
-				"name": "constant.other.placeholder",
+				"name": "constant.other.placeholder.spicy",
 				"match": "\\b(%s|%d)\\b"
 			}]
 		},
@@ -70,40 +74,40 @@
 		},
 		"builtins": {
 			"patterns": [{
-				"name": "storage.type",
+				"name": "storage.type.spicy",
 				"match": "\\b(u?int(8|16|32|64))\\b"
 			}, {
-				"name": "storage.type",
+				"name": "storage.type.spicy",
 				"match": "\\b(bitfield|bytes|string|sink)\\b"
 			}, {
-				"name": "support.function",
+				"name": "support.function.spicy",
 				"match": "\\b(print|assert|pack|unpack)\\b"
 			}
 		]},
 		"typedecl": {
 			"patterns": [{
-				"name": "keyword.declaration.class",
+				"name": "keyword.declaration.class.spicy",
 				"match": "\\bunit\\b"
 			}, {
-				"name": "keyword.declaration.struct",
+				"name": "keyword.declaration.struct.spicy",
 				"match": "\\bstruct\\b"
 			}, {
-				"name": "keyword.declaration.enum",
+				"name": "keyword.declaration.enum.spicy",
 				"match": "\\benum\\b"
 			}, {
-				"name": "entity.other.attribute-name",
+				"name": "entity.other.attribute-name.spicy",
 				"match": "\\s&\\w+\\b"
 			}]
 		},
 		"visibility": {
 			"patterns": [{
-				"name": "storage.modifier",
+				"name": "storage.modifier.spicy",
 				"match": "\\b(public|global|local)\\b"
 			}]
 		},
 		"type": {
 			"patterns": [{
-				"name": "keyword.declaration.type",
+				"name": "keyword.declaration.type.spicy",
 				"match": "\\btype\\b"
 			},
 			{
