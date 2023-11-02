@@ -118,6 +118,9 @@
 			{
 				"name": "storage.type.spicy",
 				"match": "\\bvar\\b"
+			}, {
+				"name": "storage.modifier.spicy",
+				"match": "\\bconst\\b"
 			}]
 		},
 		"regexps": {
