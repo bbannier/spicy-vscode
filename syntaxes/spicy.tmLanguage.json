@@ -18,6 +18,11 @@
 				"name": "keyword.control.spicy",
 				"match": "\\b(if|else|while|for|return)\\b"
 			}, {
+				"match": "\\b\\w+\\s+(in)\\s+\\w+\\b",
+				"captures": {
+					"1":{"name": "keyword.other.spicy"}
+				}
+			}, {
 				"name": "keyword.spicy",
 				"match": "\\bmodule\\b"
 			}, {
