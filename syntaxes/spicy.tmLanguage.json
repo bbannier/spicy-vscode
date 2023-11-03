@@ -16,7 +16,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.spicy",
-				"match": "\\b(if|else|while|for|return)\\b"
+				"match": "\\b(if|else|while|for|return|switch|stop|throw|break)\\b"
 			}, {
 				"match": "\\b\\w+\\s+(in)\\s+\\w+\\b",
 				"captures": {
@@ -86,7 +86,7 @@
 				"match": "\\b(bitfield|bytes|string|sink)\\b"
 			}, {
 				"name": "support.function.spicy",
-				"match": "\\b(print|assert|pack|unpack)\\b"
+				"match": "\\b(print|assert|pack|unpack|confirm|reject)\\b"
 			}
 		]},
 		"typedecl": {
