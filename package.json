@@ -26,6 +26,7 @@
     "url": "https://github.com/bbannier/spicy-vscode/issues"
   },
   "homepage": "https://github.com/bbannier/spicy-vscode",
+  "icon": "spicy-logo-square.png",
   "contributes": {
     "languages": [
       {
