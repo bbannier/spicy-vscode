@@ -86,7 +86,7 @@
 				"match": "\\b(bitfield|bytes|string|sink)\\b"
 			}, {
 				"name": "storage.type.spicy",
-				"match": "\\b(vector|set|map|optional)\\b"
+				"match": "\\b(vector|set|map|optional|result)\\b"
 			}, {
 				"name": "support.function.spicy",
 				"match": "\\b(print|assert|pack|unpack|confirm|reject)\\b"
