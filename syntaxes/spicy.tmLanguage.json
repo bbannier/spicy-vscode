@@ -16,7 +16,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.spicy",
-				"match": "\\b(if|else|while|for|return|switch|stop|throw|break)\\b"
+				"match": "\\b(if|else|while|for|in|return|switch|stop|throw|break)\\b"
 			}, {
 				"match": "\\b\\w+\\s+(in)\\s+\\w+\\b",
 				"captures": {
@@ -83,7 +83,7 @@
 				"match": "\\b(u?int(8|16|32|64))\\b"
 			}, {
 				"name": "storage.type.spicy",
-				"match": "\\b(bitfield|bytes|string|sink)\\b"
+				"match": "\\b(bitfield|bool|bytes|string|sink)\\b"
 			}, {
 				"name": "storage.type.spicy",
 				"match": "\\b(vector|set|map|optional|result)\\b"
@@ -123,7 +123,7 @@
 				"match": "\\bvar\\b"
 			}, {
 				"name": "storage.modifier.spicy",
-				"match": "\\bconst\\b"
+				"match": "\\b(const|inout)\\b"
 			}]
 		},
 		"regexps": {
