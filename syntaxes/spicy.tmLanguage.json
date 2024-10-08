@@ -16,7 +16,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.spicy",
-				"match": "\\b(if|else|while|for|in|return|switch|stop|throw|break)\\b"
+				"match": "\\b(if|else|while|for|in|return|switch|stop|throw|break|continue)\\b"
 			}, {
 				"match": "\\b\\w+\\s+(in)\\s+\\w+\\b",
 				"captures": {
