@@ -122,6 +122,9 @@
 				"name": "storage.type.spicy",
 				"match": "\\bvar\\b"
 			}, {
+				"name": "storage.type.spicy",
+				"match": "\\bskip\\b"
+			}, {
 				"name": "storage.modifier.spicy",
 				"match": "\\b(const|inout)\\b"
 			}]
