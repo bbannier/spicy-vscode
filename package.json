@@ -63,8 +63,5 @@
         "path": "./syntaxes/evt.tmLanguage.json"
       }
     ]
-  },
-  "dependencies": {
-    "test": "^3.3.0"
   }
 }
