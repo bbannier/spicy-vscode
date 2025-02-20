@@ -1,0 +1,43 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "EVT",
+	"patterns": [
+		{
+				"match": "\\b(protocol|packet|file|analyzer|over|TCP|UDP|originator|responder|with|on|if|event|parse|with|port|replaces)\\b",
+				"name": "keyword.other.evt"
+		}, {
+			"match": "\\b\\d{1,5}/(udp|tcp|icmp|unknown)\\b",
+			"name": "constant.numeric.port.evt"
+		}, {
+			"match": "\\$\\w+",
+			"name": "constant.language.evt"
+		}, {
+			"begin": "#",
+			"name": "comment.line.evt",
+			"end": "$"
+		}, {
+			"begin": "(\\\")",
+			"name": "string.quoted.double.zeek",
+			"beginCaptures": {
+			"1":
+				{
+					"name": "punctuation.definition.string.begin.evt"
+				}
+			},
+			"end": "(\\\")",
+			"endCaptures": {
+			"1":
+				{
+					"name": "punctuation.definition.string.end.evt"
+				}
+			}
+		}, {
+			"match": "((?:(\\d*\\.\\d*)([eE][+-]?\\d+)?)|(?:(\\d*)([eE][+-]?\\d+))|(?:(\\d*\\.\\d*)))",
+			"name": "constant.numeric.float.decimal.evt"
+		}, {
+			"match": "\\d+",
+			"name": "constant.numeric.float.decimal.evt"
+		}
+	],
+	"scopeName": "source.evt"
+}

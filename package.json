@@ -39,6 +39,15 @@
           ".spicy"
         ],
         "configuration": "./language-configuration.json"
+      }, {
+        "id": "evt",
+        "aliases": [
+          "EVT"
+        ],
+        "extensions": [
+          ".evt"
+        ],
+        "configuration": "./language-configuration.json"
       }
     ],
     "grammars": [
@@ -46,6 +55,11 @@
         "language": "spicy",
         "scopeName": "source.spicy",
         "path": "./syntaxes/spicy.tmLanguage.json"
+      },
+      {
+        "language": "evt",
+        "scopeName": "source.evt",
+        "path": "./syntaxes/evt.tmLanguage.json"
       }
     ]
   },
