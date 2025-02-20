@@ -39,7 +39,8 @@
           ".spicy"
         ],
         "configuration": "./language-configuration.json"
-      }, {
+      },
+      {
         "id": "evt",
         "aliases": [
           "EVT"

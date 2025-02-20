@@ -1,146 +1,182 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Spicy",
-	"patterns": [
-		{ "include": "#preproc" },
-		{ "include": "#strings" },
-		{ "include": "#regexps" },
-		{ "include": "#builtins" },
-		{ "include": "#typedecl" },
-		{ "include": "#comments" },
-		{ "include": "#visibility" },
-		{ "include": "#type" },
-		{ "include": "#keywords" }
-	],
-	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.spicy",
-				"match": "\\b(if|else|while|for|in|return|switch|stop|throw|break|continue)\\b"
-			}, {
-				"match": "\\b\\w+\\s+(in)\\s+\\w+\\b",
-				"captures": {
-					"1":{"name": "keyword.other.spicy"}
-				}
-			}, {
-				"name": "keyword.spicy",
-				"match": "\\bmodule\\b"
-			}, {
-				"name": "constant.language.spicy",
-				"match": "(True|False)"
-			}, {
-				"name": "support.function.spicy",
-				"match": "\\b(function|hook)\\b"
-			}, {
-				"name": "keyword.control.import.spicy",
-				"match": "\\bimport\\b"
-			}, {
-				"name": "variable.language.spicy",
-				"match": "\\bself\\b"
-			}, {
-				"name": "variable.language.spicy",
-				"match": "\\$\\$"
-			},
-			{
-				"match": "(%(\\w+)(-\\w+))*\\s*(;|=)",
-				"captures": {
-					"1": { "name": "entity.other.attribute-name.spicy" }
-				}
-			}, {
-				"match": "%\\w+",
-				"name": "variable.function.spicy",
-				"comment": "hook names like %done"
-			}, {
-				"match": "\\b(on)\\b",
-				"name": "keyword.other.spicy"
-			}, {
-				"name": "keyword.operator.spicy",
-				"match": "(\\+|-|\\*|/|\\+=|-=|\\*=|/=|\\+\\+|--|\\.|\\.\\?|\\?\\.|%)\\s"
-			}
-		]
-		},
-		"strings": {
-			"name": "string.quoted.double.spicy",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [{
-				"name": "constant.character.escape.spicy",
-				"match": "\\\\."
-			}, {
-				"name": "constant.other.placeholder.spicy",
-				"match": "\\b(%s|%d)\\b"
-			}]
-		},
-		"comments": {
-			"patterns": [{
-				"name": "comment.line.spicy",
-				"match": "#(.*)$"
-			}]
-		},
-		"builtins": {
-			"patterns": [{
-				"name": "storage.type.spicy",
-				"match": "\\b(u?int(8|16|32|64))\\b"
-			}, {
-				"name": "storage.type.spicy",
-				"match": "\\b(bitfield|bool|bytes|string|sink)\\b"
-			}, {
-				"name": "storage.type.spicy",
-				"match": "\\b(vector|set|map|optional|result)\\b"
-			}, {
-				"name": "support.function.spicy",
-				"match": "\\b(print|assert|pack|unpack|confirm|reject)\\b"
-			}
-		]},
-		"typedecl": {
-			"patterns": [{
-				"name": "keyword.declaration.class.spicy",
-				"match": "\\bunit\\b"
-			}, {
-				"name": "keyword.declaration.struct.spicy",
-				"match": "\\bstruct\\b"
-			}, {
-				"name": "keyword.declaration.enum.spicy",
-				"match": "\\benum\\b"
-			}, {
-				"name": "entity.other.attribute-name.spicy",
-				"match": "\\s&\\w+\\b"
-			}]
-		},
-		"visibility": {
-			"patterns": [{
-				"name": "storage.modifier.spicy",
-				"match": "\\b(public|global|local)\\b"
-			}]
-		},
-		"type": {
-			"patterns": [{
-				"name": "keyword.declaration.type.spicy",
-				"match": "\\btype\\b"
-			},
-			{
-				"name": "storage.type.spicy",
-				"match": "\\bvar\\b"
-			}, {
-				"name": "storage.type.spicy",
-				"match": "\\bskip\\b"
-			}, {
-				"name": "storage.modifier.spicy",
-				"match": "\\b(const|inout)\\b"
-			}]
-		},
-		"regexps": {
-			"patterns": [{
-				"name": "string.regexp.spicy",
-				"match": "\\/(.*)\\/"
-			}]
-		},
-		"preproc": {
-			"patterns": [{
-				"name": "keyword.other.spicy",
-				"match": "@\\w+"
-			}]
-		}
-	},
-	"scopeName": "source.spicy"
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Spicy",
+  "patterns": [
+    { "include": "#preproc" },
+    { "include": "#strings" },
+    { "include": "#regexps" },
+    { "include": "#builtins" },
+    { "include": "#typedecl" },
+    { "include": "#comments" },
+    { "include": "#visibility" },
+    { "include": "#type" },
+    { "include": "#keywords" }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.spicy",
+          "match": "\\b(if|else|while|for|in|return|switch|stop|throw|break|continue)\\b"
+        },
+        {
+          "match": "\\b\\w+\\s+(in)\\s+\\w+\\b",
+          "captures": {
+            "1": { "name": "keyword.other.spicy" }
+          }
+        },
+        {
+          "name": "keyword.spicy",
+          "match": "\\bmodule\\b"
+        },
+        {
+          "name": "constant.language.spicy",
+          "match": "(True|False)"
+        },
+        {
+          "name": "support.function.spicy",
+          "match": "\\b(function|hook)\\b"
+        },
+        {
+          "name": "keyword.control.import.spicy",
+          "match": "\\bimport\\b"
+        },
+        {
+          "name": "variable.language.spicy",
+          "match": "\\bself\\b"
+        },
+        {
+          "name": "variable.language.spicy",
+          "match": "\\$\\$"
+        },
+        {
+          "match": "(%(\\w+)(-\\w+))*\\s*(;|=)",
+          "captures": {
+            "1": { "name": "entity.other.attribute-name.spicy" }
+          }
+        },
+        {
+          "match": "%\\w+",
+          "name": "variable.function.spicy",
+          "comment": "hook names like %done"
+        },
+        {
+          "match": "\\b(on)\\b",
+          "name": "keyword.other.spicy"
+        },
+        {
+          "name": "keyword.operator.spicy",
+          "match": "(\\+|-|\\*|/|\\+=|-=|\\*=|/=|\\+\\+|--|\\.|\\.\\?|\\?\\.|%)\\s"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.spicy",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.spicy",
+          "match": "\\\\."
+        },
+        {
+          "name": "constant.other.placeholder.spicy",
+          "match": "\\b(%s|%d)\\b"
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.spicy",
+          "match": "#(.*)$"
+        }
+      ]
+    },
+    "builtins": {
+      "patterns": [
+        {
+          "name": "storage.type.spicy",
+          "match": "\\b(u?int(8|16|32|64))\\b"
+        },
+        {
+          "name": "storage.type.spicy",
+          "match": "\\b(bitfield|bool|bytes|string|sink)\\b"
+        },
+        {
+          "name": "storage.type.spicy",
+          "match": "\\b(vector|set|map|optional|result)\\b"
+        },
+        {
+          "name": "support.function.spicy",
+          "match": "\\b(print|assert|pack|unpack|confirm|reject)\\b"
+        }
+      ]
+    },
+    "typedecl": {
+      "patterns": [
+        {
+          "name": "keyword.declaration.class.spicy",
+          "match": "\\bunit\\b"
+        },
+        {
+          "name": "keyword.declaration.struct.spicy",
+          "match": "\\bstruct\\b"
+        },
+        {
+          "name": "keyword.declaration.enum.spicy",
+          "match": "\\benum\\b"
+        },
+        {
+          "name": "entity.other.attribute-name.spicy",
+          "match": "\\s&\\w+\\b"
+        }
+      ]
+    },
+    "visibility": {
+      "patterns": [
+        {
+          "name": "storage.modifier.spicy",
+          "match": "\\b(public|global|local)\\b"
+        }
+      ]
+    },
+    "type": {
+      "patterns": [
+        {
+          "name": "keyword.declaration.type.spicy",
+          "match": "\\btype\\b"
+        },
+        {
+          "name": "storage.type.spicy",
+          "match": "\\bvar\\b"
+        },
+        {
+          "name": "storage.type.spicy",
+          "match": "\\bskip\\b"
+        },
+        {
+          "name": "storage.modifier.spicy",
+          "match": "\\b(const|inout)\\b"
+        }
+      ]
+    },
+    "regexps": {
+      "patterns": [
+        {
+          "name": "string.regexp.spicy",
+          "match": "\\/(.*)\\/"
+        }
+      ]
+    },
+    "preproc": {
+      "patterns": [
+        {
+          "name": "keyword.other.spicy",
+          "match": "@\\w+"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.spicy"
 }
